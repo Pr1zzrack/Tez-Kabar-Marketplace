@@ -49,6 +49,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 
     'phonenumbers',
+
+
+
+
 ]
 
 MIDDLEWARE = [
