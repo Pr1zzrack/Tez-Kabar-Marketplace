@@ -49,9 +49,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 
     'phonenumbers',
-
-
-
 ]
 
 MIDDLEWARE = [
@@ -167,4 +164,28 @@ ACCOUNT_FORMS = {
     'signup': 'MainApp.forms.CustomSignUpForm',
 }
 
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'OAUTH_PKCE_ENABLED': True,
+    }
+}
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'APP': {
+            'client_id': '249678375102-74qhnusjunrsav0cr8n2pk0bhvc90aja.apps.googleusercontent.com',
+            'secret': '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',
+            'key': 'qwerty123'
+        }
+    }
+}
+
 AUTH_USER_MODEL = 'MainApp.CustomUser'
+SITE_ID = 1
